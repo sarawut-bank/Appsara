@@ -26,12 +26,11 @@ class _MyHomepageState extends State<MyHomepage> {
 
   @override
   Widget build(BuildContext context) {
+    //ข้อมูล text widget
     List<Widget> data = [];
-    data.add(Text("กดปุ่ม เลขจะเพิ่ม"));
-    data.add(Text(
-      number.toString(),
-      style: TextStyle(fontSize: 55),
-    ));
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("รายการที่ ${i + 1}"));
+    }
 
     return Scaffold(
       appBar: AppBar(
