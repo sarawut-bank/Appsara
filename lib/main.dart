@@ -10,22 +10,42 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My App",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello Flutter"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text("Sawaddeekub"),
-              Text("Penyaibang"),
-              Text("Sabuydeemai")
-            ],
-          ),
+      home: MyHomepage(),
+      theme: ThemeData(primarySwatch: Colors.yellow),
+    );
+  }
+}
+
+class MyHomepage extends StatefulWidget {
+  @override
+  _MyHomepageState createState() => _MyHomepageState();
+}
+
+class _MyHomepageState extends State<MyHomepage> {
+  int number = 0; //การสร้าง state
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Program"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("กดปุ่ม เลขจะเพิ่ม"),
+            Text(
+              number.toString(),
+              style: TextStyle(fontSize: 55),
+            ),
+          ],
         ),
       ),
-      theme: ThemeData(primarySwatch: Colors.yellow),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
