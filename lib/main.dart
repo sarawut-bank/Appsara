@@ -55,7 +55,7 @@ class _MyHomepageState extends State<MyHomepage> {
                     ),
                     Expanded(
                       child: Text(
-                        "\t50000",
+                        "50000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
@@ -65,6 +65,9 @@ class _MyHomepageState extends State<MyHomepage> {
                     )
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 8,
               ),
               Container(
                 padding: const EdgeInsets.all(10.0),
@@ -87,7 +90,7 @@ class _MyHomepageState extends State<MyHomepage> {
                     ),
                     Expanded(
                       child: Text(
-                        "\t30000",
+                        "30000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
@@ -97,6 +100,9 @@ class _MyHomepageState extends State<MyHomepage> {
                     )
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 8,
               ),
               Container(
                 padding: const EdgeInsets.all(10.0),
@@ -119,7 +125,42 @@ class _MyHomepageState extends State<MyHomepage> {
                     ),
                     Expanded(
                       child: Text(
-                        "\t20000",
+                        "20000",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(20)),
+                height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        "ค้างชำระ :",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "5000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
