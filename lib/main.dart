@@ -41,17 +41,28 @@ class _MyHomepageState extends State<MyHomepage> {
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("รายรับ :",
+                    Expanded(
+                      child: Text(
+                        "รายรับ :",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold)),
-                    Text("\t50000",
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "\t50000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold))
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -62,17 +73,28 @@ class _MyHomepageState extends State<MyHomepage> {
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("รายจ่าย :",
+                    Expanded(
+                      child: Text(
+                        "รายจ่าย :",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold)),
-                    Text("\t30000",
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "\t30000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold))
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -83,20 +105,31 @@ class _MyHomepageState extends State<MyHomepage> {
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("คงเหลือ :",
+                    Expanded(
+                      child: Text(
+                        "คงเหลือ :",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold)),
-                    Text("\t20000",
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        "\t20000",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold))
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ));
