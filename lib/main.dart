@@ -49,6 +49,9 @@ class _MyHomepageState extends State<MyHomepage> {
                 ),
                 subtitle: Text("ราคา " + food.price + "บาท",
                     style: TextStyle(fontSize: 20)),
+                onTap: () {
+                  print("Choose Name Menu:" + food.name);
+                },
               );
             }));
   }
