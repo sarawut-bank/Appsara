@@ -24,34 +24,31 @@ class MyHomepage extends StatefulWidget {
 class _MyHomepageState extends State<MyHomepage> {
   int number = 0; //การสร้าง state
 
+  //แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
-    //ข้อมูล text widget
-    List<Widget> data = [];
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("รายการที่ ${i + 1}"));
-    }
-
     return Scaffold(
       appBar: AppBar(
-        title: Text("Program"),
+        title: Text("Choose Menu"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: data,
+        child: ListView(
+          children: getData(20),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNumber,
-        child: Icon(Icons.add),
       ),
     );
   }
 
-  void addNumber() {
-    setState(() {
-      number++;
-    });
+  //เตรียมข้อมูล
+  List<Widget> getData(int count) {
+    //ข้อมูล text widget
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text(
+        "Menu ${i + 1}",
+        style: TextStyle(fontSize: 20),
+      ));
+    }
+    return data;
   }
 }
