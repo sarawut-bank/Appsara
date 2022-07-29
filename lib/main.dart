@@ -28,31 +28,15 @@ class _MyHomepageState extends State<MyHomepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Choose Menu"),
-      ),
-      body: Center(
-        child: ListView(
-          children: getData(20),
+        appBar: AppBar(
+          title: Text("Choose Menu"),
         ),
-      ),
-    );
-  }
-
-  //เตรียมข้อมูล
-  List<Widget> getData(int count) {
-    //ข้อมูล text widget
-    List<Widget> data = [];
-    for (var i = 0; i < count; i++) {
-      var menu = ListTile(
-        title: Text(
-          "Menu ${i + 1}",
-          style: TextStyle(fontSize: 25),
-        ),
-        subtitle: Text("หัวข้อที่ ${i + 1}"),
-      );
-      data.add(menu);
-    }
-    return data;
+        body: ListView.builder(
+            itemCount: 30,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text("Menu ${index + 1}"),
+              );
+            }));
   }
 }
