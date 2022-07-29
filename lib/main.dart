@@ -44,10 +44,14 @@ class _MyHomepageState extends State<MyHomepage> {
     //ข้อมูล text widget
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text(
-        "Menu ${i + 1}",
-        style: TextStyle(fontSize: 20),
-      ));
+      var menu = ListTile(
+        title: Text(
+          "Menu ${i + 1}",
+          style: TextStyle(fontSize: 25),
+        ),
+        subtitle: Text("หัวข้อที่ ${i + 1}"),
+      );
+      data.add(menu);
     }
     return data;
   }
