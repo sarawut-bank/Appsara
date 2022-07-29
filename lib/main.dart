@@ -41,20 +41,61 @@ class _MyHomepageState extends State<MyHomepage> {
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
                 child: Row(
-                  children: [Text("รายรับ :"), Text("\t50000")],
+                  children: [
+                    Text("รายรับ :",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                    Text("\t50000",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold))
+                  ],
                 ),
               ),
               Container(
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.yellow,
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
+                child: Row(
+                  children: [
+                    Text("รายจ่าย :",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                    Text("\t30000",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold))
+                  ],
+                ),
               ),
               Container(
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(20)),
                 height: 100,
+                child: Row(
+                  children: [
+                    Text("คงเหลือ :",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                    Text("\t20000",
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold))
+                  ],
+                ),
               )
             ],
           ),
