@@ -24,8 +24,6 @@ class MyHomepage extends StatefulWidget {
 }
 
 class _MyHomepageState extends State<MyHomepage> {
-  int number = 0;
-
   @override
   void initState() {
     // TODO: implement initState
@@ -41,20 +39,7 @@ class _MyHomepageState extends State<MyHomepage> {
         title: Text("My Account"),
       ),
       body: Column(
-        children: [
-          Text(
-            number.toString(),
-            style: TextStyle(fontSize: 20),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
-        child: Icon(Icons.add),
+        children: [],
       ),
     );
   }
