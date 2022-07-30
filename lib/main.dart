@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'FoodMenu.dart';
-import 'MoneyBox.dart';
+import 'package:http/http.dart' as http;
+import 'dart:core';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My App",
       home: MyHomepage(),
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(primarySwatch: Colors.purple),
     );
   }
 }
@@ -28,15 +28,21 @@ class _MyHomepageState extends State<MyHomepage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    print("เรียกใช้งาน init state");
+    getExchagerate();
+  }
+
+  Future<void> getExchagerate() async {
+    var url =
+        "https://apigw1.bot.or.th/bot/public/Stat-ExchangeRate/v2/DAILY_AVG_EXG_RATE/";
+    var response = await http.get(Uri.parse(url));
+    print(response.body);
   }
 
   @override
   Widget build(BuildContext context) {
-    print("เรียกใช้งาน build");
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Account"),
+        title: Text("อัตราการแลกเปลี่ยน"),
       ),
       body: Column(
         children: [],
